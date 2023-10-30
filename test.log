@@ -1,0 +1,1851 @@
+++ nproc
++ export NPROC=80
++ NPROC=80
++ export JOBS=-j81
++ JOBS=-j81
++ export 'travis_apt_get_options=--allow-downgrades --allow-remove-essential --allow-change-held-packages'
++ travis_apt_get_options='--allow-downgrades --allow-remove-essential --allow-change-held-packages'
++ export 'travis_apt_get_options=-yq --no-install-suggests --no-install-recommends --allow-downgrades --allow-remove-essential --allow-change-held-packages'
++ travis_apt_get_options='-yq --no-install-suggests --no-install-recommends --allow-downgrades --allow-remove-essential --allow-change-held-packages'
++ export debugflags=-ggdb3
++ debugflags=-ggdb3
++ export 'RUBY_TESTOPTS=-j81 -q --tty=no'
++ RUBY_TESTOPTS='-j81 -q --tty=no'
++ export 'SETARCH=setarch linux32 --verbose --32bit'
++ SETARCH='setarch linux32 --verbose --32bit'
++ arm-linux-gnueabihf-gcc --version
+arm-linux-gnueabihf-gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+Copyright (C) 2021 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ export CC=arm-linux-gnueabihf-gcc
++ CC=arm-linux-gnueabihf-gcc
++ ./autogen.sh
++ mkdir build
++ cd build
+++ pwd
++ setarch linux32 --verbose --32bit ../configure -C --disable-install-doc --prefix=/home/jaruga/git/ruby/ruby/build/install
+Switching on ADDR_LIMIT_32BIT.
+Execute command `../configure'.
+configure: creating cache config.cache
+checking for ruby... /home/jaruga/.local/ruby-3.3.0dev-debug-511571b5ff/bin/ruby
+tool/config.guess already exists
+tool/config.sub already exists
+checking build system type... armv8l-unknown-linux-gnueabihf
+checking host system type... armv8l-unknown-linux-gnueabihf
+checking target system type... armv8l-unknown-linux-gnueabihf
+checking for arm-linux-gnueabihf-ld... arm-linux-gnueabihf-ld
+checking for arm-linux-gnueabihf-gcc-ar... arm-linux-gnueabihf-gcc-ar
+checking for arm-linux-gnueabihf-g++... arm-linux-gnueabihf-g++
+checking for arm-linux-gnueabihf-gcc-nm... arm-linux-gnueabihf-gcc-nm
+checking for arm-linux-gnueabihf-gcc-ranlib... arm-linux-gnueabihf-gcc-ranlib
+checking for gcc... arm-linux-gnueabihf-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether arm-linux-gnueabihf-gcc accepts -g... yes
+checking for arm-linux-gnueabihf-gcc option to enable C11 features... none needed
+checking whether the compiler supports GNU C++... yes
+checking whether arm-linux-gnueabihf-g++ accepts -g... yes
+checking for arm-linux-gnueabihf-g++ option to enable C++11 features... none needed
+checking how to run the C preprocessor... arm-linux-gnueabihf-gcc -E
+checking for gas... no
+checking for as... as
+checking for gobjcopy... no
+checking for objcopy... objcopy
+checking for gobjdump... no
+checking for objdump... objdump
+checking for gstrip... no
+checking for strip... strip
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for vfork.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking whether the linker is GNU ld... yes
+checking whether arm-linux-gnueabihf-gcc -E accepts -o... yes
+checking for arm-linux-gnueabihf-gcc-ar flags... rcD
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... yes
+checking for a BSD-compatible install... /bin/install -c
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for dtrace... no
+checking for dot... no
+checking for doxygen... no
+checking for pkg-config... no
+checking whether it is Android... no
+checking for cd using physical directory... cd -P
+checking whether CFLAGS is valid... yes
+checking whether LDFLAGS is valid... yes
+checking whether ELF binaries are produced... yes
+checking whether -Wl,-rpath,. is accepted as LDFLAGS... yes
+checking whether -fdeclspec is accepted as LDFLAGS... no
+checking whether -fdeclspec is accepted as CXXFLAGS... no
+checking whether -Wextra-tokens is accepted as CFLAGS... no
+checking whether -Wdeprecated-declarations is accepted as CFLAGS... yes
+checking whether -Wdivision-by-zero is accepted as CFLAGS... no
+checking whether -Wdiv-by-zero is accepted as CFLAGS... yes
+checking whether -Wduplicated-cond is accepted as CFLAGS... yes
+checking whether -Wimplicit-function-declaration is accepted as CFLAGS... yes
+checking whether -Wimplicit-int is accepted as CFLAGS... yes
+checking whether -Wpointer-arith is accepted as CFLAGS... yes
+checking whether -Wshorten-64-to-32 is accepted as CFLAGS... no
+checking whether -Wwrite-strings is accepted as CFLAGS... yes
+checking whether -Wold-style-definition is accepted as CFLAGS... yes
+checking whether -Wimplicit-fallthrough=0 is accepted as CFLAGS... yes
+checking whether -Wmissing-noreturn is accepted as CFLAGS... yes
+checking whether -Wno-cast-function-type is accepted as CFLAGS... yes
+checking whether -Wno-constant-logical-operand is accepted as CFLAGS... yes
+checking whether -Wno-long-long is accepted as CFLAGS... yes
+checking whether -Wno-missing-field-initializers is accepted as CFLAGS... yes
+checking whether -Wno-overlength-strings is accepted as CFLAGS... yes
+checking whether -Wno-packed-bitfield-compat is accepted as CFLAGS... yes
+checking whether -Wno-parentheses-equality is accepted as CFLAGS... yes
+checking whether -Wno-self-assign is accepted as CFLAGS... yes
+checking whether -Wno-tautological-compare is accepted as CFLAGS... yes
+checking whether -Wno-unused-parameter is accepted as CFLAGS... yes
+checking whether -Wno-unused-value is accepted as CFLAGS... yes
+checking whether -Wsuggest-attribute=format is accepted as CFLAGS... yes
+checking whether -Wsuggest-attribute=noreturn is accepted as CFLAGS... yes
+checking whether -Wunused-variable is accepted as CFLAGS... yes
+checking whether -diag-disable=175,188,1684,2259,2312 is accepted as CFLAGS... no
+checking whether -Wmisleading-indentation is accepted as CFLAGS... yes
+checking whether -Wundef is accepted as CFLAGS... yes
+checking whether -Wall -Wextra is accepted as CFLAGS... yes
+checking whether -Qunused-arguments is accepted as CFLAGS... no
+checking whether -O3 -D_FORTIFY_SOURCE=2 is accepted as CFLAGS... yes
+checking whether -fstack-protector-strong is accepted as CFLAGS... yes
+checking whether -fstack-protector-strong is accepted as LDFLAGS... yes
+checking for -fstack-protector... -fstack-protector-strong
+checking whether -Wl,--compress-debug-sections=zlib is accepted as LDFLAGS... yes
+checking whether -fno-strict-overflow is accepted as CFLAGS... yes
+checking whether -fvisibility=hidden is accepted as CFLAGS... yes
+checking whether -fno-fast-math is accepted as CFLAGS... yes
+checking whether -fexcess-precision=standard is accepted as CFLAGS... yes
+checking whether -fp-model precise is accepted as CFLAGS... no
+checking whether compiler has statement and declarations in expressions... yes
+checking for pthread.h... yes
+checking for pthread_create in -lthr... no
+checking for pthread_create in -lpthread... yes
+checking for pthread_np.h... no
+checking thread model... pthread
+checking whether CXXFLAGS is valid... yes
+checking for crypt in -lcrypt... yes
+checking for dlopen in -ldl... yes
+checking for shutdown in -lsocket... no
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for _Bool... yes
+checking for stdbool.h that conforms to C99... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for afunix.h... no
+checking for atomic.h... no
+checking for copyfile.h... no
+checking for direct.h... no
+checking for grp.h... yes
+checking for fcntl.h... yes
+checking for float.h... yes
+checking for ieeefp.h... no
+checking for intrinsics.h... no
+checking for langinfo.h... yes
+checking for limits.h... yes
+checking for locale.h... yes
+checking for malloc.h... yes
+checking for malloc/malloc.h... no
+checking for malloc_np.h... no
+checking for net/socket.h... no
+checking for process.h... no
+checking for pwd.h... yes
+checking for sanitizer/asan_interface.h... yes
+checking for sanitizer/msan_interface.h... no
+checking for setjmpex.h... no
+checking for stdalign.h... yes
+checking for stdio.h... (cached) yes
+checking for sys/attr.h... no
+checking for sys/eventfd.h... yes
+checking for sys/fcntl.h... yes
+checking for sys/file.h... yes
+checking for sys/id.h... no
+checking for sys/ioctl.h... yes
+checking for sys/mkdev.h... no
+checking for sys/param.h... yes
+checking for sys/prctl.h... yes
+checking for sys/random.h... yes
+checking for sys/resource.h... yes
+checking for sys/select.h... yes
+checking for sys/sendfile.h... yes
+checking for sys/socket.h... yes
+checking for sys/syscall.h... yes
+checking for sys/sysmacros.h... yes
+checking for sys/time.h... yes
+checking for sys/times.h... yes
+checking for sys/uio.h... yes
+checking for sys/utime.h... no
+checking for syscall.h... yes
+checking for time.h... yes
+checking for ucontext.h... yes
+checking for utime.h... yes
+checking for sys/epoll.h... yes
+checking for gmp.h... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking whether byte ordering is bigendian... no
+checking for an ANSI C-conforming const... yes
+checking whether char is unsigned... yes
+checking for inline... inline
+checking for working volatile... yes
+checking for typeof syntax and keyword spelling... typeof
+checking for C/C++ restrict keyword... __restrict__
+checking for long long... yes
+checking for off_t... yes
+checking char bit... 8
+checking size of int... 4
+checking size of short... 2
+checking size of long... 4
+checking size of long long... 8
+checking size of __int64... 0
+checking size of __int128... 0
+checking size of off_t... 8
+checking size of void*... 4
+checking size of float... 4
+checking size of double... 8
+checking size of time_t... 4
+checking size of clock_t... 4
+checking packed struct attribute... x __attribute__((packed))
+checking whether -Wno-address-of-packed-member is accepted as CFLAGS... yes
+checking for printf prefix for long long... ll
+checking for pid_t... yes
+checking for convertible type of pid_t... INT
+checking for uid_t... yes
+checking for convertible type of uid_t... UINT
+checking for gid_t... yes
+checking for convertible type of gid_t... UINT
+checking for time_t... yes
+checking for convertible type of time_t... LONG
+checking for dev_t... yes
+checking for convertible type of dev_t... ULL
+checking for mode_t... yes
+checking for convertible type of mode_t... UINT
+checking for rlim_t... yes
+checking for convertible type of rlim_t... ULL
+checking for off_t... (cached) yes
+checking for convertible type of off_t... LL
+checking for clockid_t... yes
+checking for convertible type of clockid_t... INT
+checking for variable length macro... yes
+checking if _Alignof() works... yes
+checking for CONSTFUNC function attribute... __attribute__ ((__const__)) x
+checking for PUREFUNC function attribute... __attribute__ ((__pure__)) x
+checking for NORETURN function attribute... __attribute__ ((__noreturn__)) x
+checking for DEPRECATED function attribute... __attribute__ ((__deprecated__)) x
+checking for DEPRECATED_BY function attribute... __attribute__ ((__deprecated__("by "#n))) x
+checking for NOINLINE function attribute... __attribute__ ((__noinline__)) x
+checking for ALWAYS_INLINE function attribute... __attribute__ ((__always_inline__)) x
+checking for NO_SANITIZE function attribute... __attribute__ ((__no_sanitize__(san))) x
+checking for NO_SANITIZE_ADDRESS function attribute... __attribute__ ((__no_sanitize_address__)) x
+checking for NO_ADDRESS_SAFETY_ANALYSIS function attribute... __attribute__ ((__no_address_safety_analysis__)) x
+checking for WARN_UNUSED_RESULT function attribute... __attribute__ ((__warn_unused_result__)) x
+checking for MAYBE_UNUSED function attribute... __attribute__ ((__unused__)) x
+checking for ERRORFUNC function attribute... __attribute__ ((__error__ mesg)) x
+checking for WARNINGFUNC function attribute... __attribute__ ((__warning__ mesg)) x
+checking for WEAK function attribute... __attribute__ ((__weak__)) x
+checking for __attribute__((__depreacted__(msg))) in C++... yes
+checking for std::nullptr_t... yes
+checking for FUNC_STDCALL function attribute... x
+checking for FUNC_CDECL function attribute... x
+checking for FUNC_FASTCALL function attribute... x
+checking for FUNC_UNOPTIMIZED function attribute... __attribute__ ((__optimize__("O0"))) x
+checking for FUNC_MINIMIZED function attribute... __attribute__ ((__optimize__("-Os","-fomit-frame-pointer"))) x
+checking for function alias... alias
+checking for __atomic builtins... yes
+checking for __sync builtins... yes
+checking for __builtin_unreachable... yes
+checking for __assume... no
+checking for exported function attribute... __attribute__ ((__visibility__("default")))
+checking for RUBY_FUNC_NONNULL function attribute... __attribute__ ((__nonnull__(n))) x
+checking for function name string predefined identifier... __func__
+checking if enum over int is allowed... yes
+checking for arm-linux-gnueabihf-gcc options needed to detect all undeclared functions... none needed
+checking whether sys_nerr is declared... no
+checking whether getenv is declared... yes
+checking for size_t... yes
+checking size of size_t... 4
+checking size of ptrdiff_t... 4
+checking size of dev_t... 8
+checking for printf prefix for size_t... z
+checking for printf prefix for ptrdiff_t... t
+checking for struct stat.st_blksize... yes
+checking for struct stat.st_blocks... yes
+checking for struct stat.st_rdev... yes
+checking size of struct stat.st_size... SIZEOF_OFF_T
+checking size of struct stat.st_blocks... SIZEOF_OFF_T
+checking size of struct stat.st_ino... SIZEOF_LONG_LONG
+checking size of struct stat.st_dev... SIZEOF_DEV_T
+checking size of struct stat.st_rdev... SIZEOF_DEV_T
+checking for struct stat.st_atim... yes
+checking for struct stat.st_atimespec... no
+checking for struct stat.st_atimensec... no
+checking for struct stat.st_mtim... yes
+checking for struct stat.st_mtimespec... no
+checking for struct stat.st_mtimensec... no
+checking for struct stat.st_ctim... yes
+checking for struct stat.st_ctimespec... no
+checking for struct stat.st_ctimensec... no
+checking for struct stat.st_birthtimespec... no
+checking for struct statx.stx_btime... yes
+checking for struct timeval... yes
+checking size of struct timeval.tv_sec... SIZEOF_TIME_T
+checking for struct timespec... yes
+checking for struct timezone... yes
+checking for fd_mask... yes
+checking for int8_t... yes
+checking size of int8_t... 1
+checking for uint8_t... yes
+checking size of uint8_t... 1
+checking for int16_t... yes
+checking size of int16_t... 2
+checking for uint16_t... yes
+checking size of uint16_t... 2
+checking for int32_t... yes
+checking size of int32_t... 4
+checking for uint32_t... yes
+checking size of uint32_t... 4
+checking for int64_t... yes
+checking size of int64_t... 8
+checking for uint64_t... yes
+checking size of uint64_t... 8
+checking for int128_t... no
+checking for uint128_t... no
+checking for intptr_t... yes
+checking size of intptr_t... 4
+checking for uintptr_t... yes
+checking size of uintptr_t... 4
+checking for printf prefix for intptr_t... NONE
+checking for ssize_t... yes
+checking size of ssize_t... 4
+checking for printf prefix for int64_t... NONE
+checking for stack end address... __libc_stack_end
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for uid_t in sys/types.h... (cached) yes
+checking type of array argument to getgroups... gid_t
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for dynamic size alloca... ok
+checking for working memcmp... yes
+checking for dup... yes
+checking for dup2... yes
+checking for acosh... yes
+checking for cbrt... yes
+checking for crypt... yes
+checking for erf... yes
+checking for explicit_bzero... yes
+checking for ffs... yes
+checking for flock... yes
+checking for hypot... yes
+checking for lgamma_r... yes
+checking for memmove... yes
+checking for nan... yes
+checking for nextafter... yes
+checking for setproctitle... no
+checking for strchr... yes
+checking for strerror... yes
+checking for strlcat... no
+checking for strlcpy... no
+checking for strstr... yes
+checking for tgamma... yes
+checking for sys/pstat.h... no
+checking for pid_t... (cached) yes
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking for __syscall... no
+checking for _longjmp... yes
+checking for arc4random_buf... no
+checking for atan2l... yes
+checking for atan2f... yes
+checking for chmod... yes
+checking for chown... yes
+checking for chroot... yes
+checking for chsize... no
+checking for clock_gettime... yes
+checking for copy_file_range... yes
+checking for cosh... yes
+checking for crypt_r... yes
+checking for daemon... (cached) no
+checking for dirfd... yes
+checking for dl_iterate_phdr... yes
+checking for dlopen... yes
+checking for dladdr... yes
+checking for dup3... yes
+checking for eaccess... yes
+checking for endgrent... yes
+checking for eventfd... yes
+checking for execl... yes
+checking for execle... yes
+checking for execv... yes
+checking for execve... yes
+checking for explicit_memset... no
+checking for fcopyfile... no
+checking for fchdir... yes
+checking for fchmod... yes
+checking for fchown... yes
+checking for fcntl... yes
+checking for fdatasync... yes
+checking for fdopendir... yes
+checking for fgetattrlist... no
+checking for fmod... yes
+checking for fstatat... yes
+checking for fsync... yes
+checking for ftruncate... yes
+checking for ftruncate64... yes
+checking for getattrlist... no
+checking for getcwd... yes
+checking for getegid... yes
+checking for getentropy... yes
+checking for geteuid... yes
+checking for getgid... yes
+checking for getgidx... no
+checking for getgrnam... yes
+checking for getgrnam_r... yes
+checking for getgroups... yes
+checking for getlogin... yes
+checking for getlogin_r... yes
+checking for getpgid... yes
+checking for getpgrp... yes
+checking for getppid... yes
+checking for getpriority... yes
+checking for getpwnam... yes
+checking for getpwnam_r... yes
+checking for getpwuid... yes
+checking for getpwuid_r... yes
+checking for getrandom... yes
+checking for getresgid... yes
+checking for getresuid... yes
+checking for getrlimit... yes
+checking for getsid... yes
+checking for gettimeofday... yes
+checking for getuid... yes
+checking for getuidx... no
+checking for gmtime_r... yes
+checking for grantpt... yes
+checking for initgroups... yes
+checking for ioctl... yes
+checking for isfinite... no
+checking for issetugid... no
+checking for kill... yes
+checking for killpg... yes
+checking for lchmod... yes
+checking for lchown... yes
+checking for link... yes
+checking for llabs... yes
+checking for lockf... yes
+checking for log2... yes
+checking for lstat... yes
+checking for lutimes... yes
+checking for malloc_usable_size... yes
+checking for malloc_size... no
+checking for malloc_trim... yes
+checking for mblen... yes
+checking for memalign... yes
+checking for memset_s... no
+checking for writev... yes
+checking for memrchr... yes
+checking for memmem... yes
+checking for mkfifo... yes
+checking for mknod... yes
+checking for mktime... yes
+checking for mmap... yes
+checking for mremap... yes
+checking for openat... yes
+checking for pclose... yes
+checking for pipe... yes
+checking for pipe2... yes
+checking for poll... yes
+checking for popen... yes
+checking for posix_fadvise... yes
+checking for posix_madvise... yes
+checking for posix_memalign... yes
+checking for ppoll... yes
+checking for pread... yes
+checking for pwrite... yes
+checking for qsort_r... yes
+checking for qsort_s... no
+checking for readlink... yes
+checking for realpath... yes
+checking for round... yes
+checking for sched_getaffinity... yes
+checking for seekdir... yes
+checking for select_large_fdset... no
+checking for sendfile... yes
+checking for setegid... yes
+checking for setenv... yes
+checking for seteuid... yes
+checking for setgid... yes
+checking for setgroups... yes
+checking for setpgid... yes
+checking for setpgrp... yes
+checking for setregid... yes
+checking for setresgid... yes
+checking for setresuid... yes
+checking for setreuid... yes
+checking for setrgid... no
+checking for setrlimit... yes
+checking for setruid... no
+checking for setsid... yes
+checking for setuid... yes
+checking for shutdown... yes
+checking for sigaction... yes
+checking for sigaltstack... yes
+checking for sigprocmask... yes
+checking for sinh... yes
+checking for snprintf... yes
+checking for spawnv... no
+checking for symlink... yes
+checking for syscall... yes
+checking for sysconf... yes
+checking for system... yes
+checking for tanh... yes
+checking for telldir... yes
+checking for timegm... yes
+checking for times... yes
+checking for truncate... yes
+checking for truncate64... yes
+checking for tzset... yes
+checking for umask... yes
+checking for unsetenv... yes
+checking for utimensat... yes
+checking for utimes... yes
+checking for wait4... yes
+checking for waitpid... yes
+checking for __cospi... no
+checking for __sinpi... no
+checking for statx... yes
+checking if getcwd allocates buffer if NULL is given... yes
+checking for crypt.h... yes
+checking for struct crypt_data.initialized... yes
+checking for __builtin_alloca_with_align... yes
+checking for __builtin_assume_aligned... yes
+checking for __builtin_bswap16... yes
+checking for __builtin_bswap32... yes
+checking for __builtin_bswap64... yes
+checking for __builtin_popcount... yes
+checking for __builtin_popcountll... yes
+checking for __builtin_clz... yes
+checking for __builtin_clzl... yes
+checking for __builtin_clzll... yes
+checking for __builtin_ctz... yes
+checking for __builtin_ctzll... yes
+checking for __builtin_add_overflow... yes
+checking for __builtin_sub_overflow... yes
+checking for __builtin_mul_overflow... yes
+checking for __builtin_mul_overflow_p... yes
+checking for __builtin_constant_p... yes
+checking for __builtin_choose_expr... yes
+checking for __builtin_choose_expr_constant_p... yes
+checking for __builtin_types_compatible_p... yes
+checking for __builtin_trap... yes
+checking for __builtin_expect... yes
+checking for __builtin_mul_overflow with long long arguments... yes
+checking whether qsort_r is GNU version... yes
+checking whether qsort_r is BSD version... no
+checking whether atan2 handles Inf as C99... yes
+checking for clock_getres... yes
+checking for timer_create in -lrt... yes
+checking for timer_settime in -lrt... yes
+checking for unsetenv returns a value... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for struct tm.tm_zone... yes
+checking for struct tm.tm_gmtoff... yes
+checking for external int daylight... yes
+checking for negative time_t for gmtime(3)... yes
+checking for localtime(3) overflow correctly... yes
+checking for sig_t... yes
+checking whether right shift preserve sign bit... yes
+checking whether _SC_CLK_TCK is supported... yes
+checking stack growing direction on armv8l... -1
+checking native coroutine implementation for armv8l-linux-eabihf... arm32
+checking whether pthread_t is scalar type... yes
+checking for sched_yield... yes
+checking for pthread_attr_setinheritsched... yes
+checking for pthread_attr_get_np... no
+checking for pthread_attr_getstack... yes
+checking for pthread_attr_getguardsize... yes
+checking for pthread_get_stackaddr_np... no
+checking for pthread_get_stacksize_np... no
+checking for thr_stksegment... no
+checking for pthread_stackseg_np... no
+checking for pthread_getthrds_np... no
+checking for pthread_condattr_setclock... yes
+checking for pthread_setname_np... yes
+checking for pthread_set_name_np... no
+checking for pthread_sigmask... yes
+checking for pthread_getattr_np... yes
+checking arguments of pthread_setname_np... (pthread_self(), name)
+checking for thread-local storage sepcifier... _Thread_local
+checking if mcontext_t is a pointer... no
+checking for getcontext... yes
+checking for setcontext... yes
+checking if fork works with pthread... yes
+checking for sys/user.h... yes
+checking whether PAGE_SIZE is compile-time const... no
+checking ioctl request type... unsigned long
+checking for elf.h... yes
+checking for elf_abi.h... no
+checking for uncompress in -lz... yes
+checking for mach-o/loader.h... no
+checking whether OS depend dynamic link works... yes
+checking for backtrace... yes
+checking for broken backtrace... yes
+checking for valgrind/memcheck.h... no
+checking for strip flags... -S -x
+checking whether -fPIE is accepted as CFLAGS... yes
+checking whether -pie is accepted as LDFLAGS... yes
+checking whether wrapper for LD_LIBRARY_PATH is needed... no
+checking whether dtrace USDT is available... no
+checking for __builtin_setjmp... yes with cast ()
+checking for _setjmpex as a macro or function... no
+checking for _setjmp as a macro or function... yes
+checking for sigsetjmp as a macro or function... no
+checking for setjmp type... __builtin_setjmp
+checking for rustc... rustc
+checking whether rustc works for YJIT... no
+checking for prefix of external symbols... NONE
+checking if make is GNU make... yes
+.ext/include/armv8l-linux-eabihf/ruby/config.h updated
+configure: ruby library version = 3.3.0+0
+configure: updating cache config.cache
+configure: creating ./config.status
+config.status: creating GNUmakefile
+config.status: creating Makefile
+---
+Configuration summary for ruby version 3.3.0
+
+   * Installation prefix: /home/jaruga/git/ruby/ruby/build/install
+   * exec prefix:         ${prefix}
+   * arch:                armv8l-linux-eabihf
+   * site arch:           ${arch}
+   * RUBY_BASE_NAME:      ruby
+   * ruby lib prefix:     ${libdir}/${RUBY_BASE_NAME}
+   * site libraries path: ${rubylibprefix}/${sitearch}
+   * vendor path:         ${rubylibprefix}/vendor_ruby
+   * target OS:           linux-eabihf
+   * compiler:            arm-linux-gnueabihf-gcc
+   * with thread:         pthread
+   * with coroutine:      arm32
+   * enable shared libs:  no
+   * dynamic library ext: so
+   * CFLAGS:              ${optflags} ${debugflags} ${warnflags}
+   * LDFLAGS:             -L. -fstack-protector-strong -rdynamic \
+                          -Wl,-export-dynamic
+   * DLDFLAGS:            -Wl,--compress-debug-sections=zlib
+   * optflags:            -O3 -fno-fast-math
+   * debugflags:          -ggdb3
+   * warnflags:           -Wall -Wextra -Wdeprecated-declarations \
+                          -Wdiv-by-zero -Wduplicated-cond \
+                          -Wimplicit-function-declaration -Wimplicit-int \
+                          -Wpointer-arith -Wwrite-strings \
+                          -Wold-style-definition -Wimplicit-fallthrough=0 \
+                          -Wmissing-noreturn -Wno-cast-function-type \
+                          -Wno-constant-logical-operand -Wno-long-long \
+                          -Wno-missing-field-initializers \
+                          -Wno-overlength-strings \
+                          -Wno-packed-bitfield-compat \
+                          -Wno-parentheses-equality -Wno-self-assign \
+                          -Wno-tautological-compare -Wno-unused-parameter \
+                          -Wno-unused-value -Wsuggest-attribute=format \
+                          -Wsuggest-attribute=noreturn -Wunused-variable \
+                          -Wmisleading-indentation -Wundef
+   * strip command:       strip -S -x
+   * install doc:         no
+   * YJIT support:        no
+   * RJIT support:        no
+   * man page type:       doc
+   * BASERUBY -v:         ruby 3.3.0dev (2023-10-13T14:21:33Z master \
+                          511571b5ff) [aarch64-linux]
+
+---
++ setarch linux32 --verbose --32bit make -s -j81
+Switching on ADDR_LIMIT_32BIT.
+Execute command `make'.
+compiling ../main.c
+compiling ../dmydln.c
+generating id.h
+generating miniprelude.c
+compiling ../dmyext.c
+making ../array.rbinc
+making ../ast.rbinc
+generating optunifs.inc
+generating insns.inc
+generating insns_info.inc
+generating optinsn.inc
+compiling ../debug_counter.c
+making ../dir.rbinc
+compiling ../dln_find.c
+compiling ../encoding.c
+generating known_errors.inc
+making ../warning.rbinc
+making ../gc.rbinc
+making ../prelude.rbinc
+making ../io.rbinc
+compiling ../io_buffer.c
+making ../marshal.rbinc
+compiling ../math.c
+making ../rjit.rbinc
+making ../rjit_c.rbinc
+generating node_name.inc
+making ../numeric.rbinc
+making ../kernel.rbinc
+making ../nilclass.rbinc
+making ../pack.rbinc
+compiling ../parser_st.c
+copying lex.c
+making ../ractor.rbinc
+compiling ../regcomp.c
+compiling ../regenc.c
+compiling ../regerror.c
+compiling ../regexec.c
+compiling ../regparse.c
+compiling ../regsyntax.c
+compiling ../ruby_parser.c
+compiling ../st.c
+compiling ../strftime.c
+generating id.c
+making ../symbol.rbinc
+making ../thread_sync.rbinc
+making ../timev.rbinc
+compiling ../util.c
+generating vm.inc
+generating vm_call_iseq_optimized.inc
+generating vmtc.inc
+making ../trace_point.rbinc
+compiling ../prism/util/pm_buffer.c
+compiling ../prism/util/pm_char.c
+compiling ../prism/util/pm_constant_pool.c
+compiling ../prism/util/pm_list.c
+compiling ../prism/util/pm_newline_list.c
+compiling ../prism/util/pm_state_stack.c
+compiling ../prism/util/pm_string.c
+compiling ../prism/util/pm_string_list.c
+id.h updated
+compiling ../prism/util/pm_strncasecmp.c
+compiling ../missing/setproctitle.c
+compiling ../missing/strlcat.c
+compiling ../missing/strlcpy.c
+compiling ../addr2line.c
+compiling ../dmyenc.c
+known_errors.inc updated
++ cp ../enc/jis/props.h.blt ../enc/jis/props.h
+compiling ../dln.c
+compiling ../localeinit.c
+generating ../lib/ruby_vm/rjit/instruction.rb
+making dummy probes.h
+compiling ../ast.c
+compiling ../bignum.c
+compiling ../class.c
+compiling ../compar.c
+compiling ../complex.c
+compiling ../cont.c
+compiling ../debug.c
+compiling ../dir.c
+compiling ../enum.c
+compiling ../enumerator.c
+compiling ../error.c
+compiling ../eval.c
+compiling ../file.c
+compiling ../gc.c
+compiling ../hash.c
+compiling ../inits.c
+compiling ../io.c
+compiling ../load.c
+compiling ../marshal.c
+compiling ../memory_view.c
+compiling ../node.c
+compiling ../node_dump.c
+compiling ../numeric.c
+compiling ../object.c
+compiling ../pack.c
+generating parse.c
+id.c updated
+compiling ../proc.c
+vm_call_iseq_optimized.inc updated
+compiling ../process.c
+compiling ../ractor.c
+compiling ../random.c
+compiling ../rational.c
+compiling ../range.c
+compiling ../re.c
+compiling ../scheduler.c
+compiling ../shape.c
+compiling ../signal.c
+compiling ../sprintf.c
+compiling ../string.c
+compiling ../struct.c
+compiling ../symbol.c
+compiling ../thread.c
+../revision.h updated
+compiling ../time.c
+compiling ../transcode.c
+compiling ../variable.c
+generating enc/trans/newline.c ...
+compiling ../version.c
+compiling ../vm_backtrace.c
+compiling ../vm_dump.c
+compiling ../vm_sync.c
+compiling ../vm_trace.c
+compiling ../weakmap.c
+compiling ../prism/api_pack.c
+compiling ../prism/diagnostic.c
+compiling ../prism/enc/pm_big5.c
+compiling ../prism/enc/pm_euc_jp.c
+compiling ../prism/enc/pm_shift_jis.c
+compiling ../prism/enc/pm_gbk.c
+compiling ../prism/enc/pm_tables.c
+compiling ../prism/enc/pm_unicode.c
+compiling ../prism/enc/pm_windows_31j.c
+compiling ../prism/extension.c
+compiling prism/node.c
+compiling ../prism/pack.c
+compiling prism/prettyprint.c
+compiling ../prism/regexp.c
+compiling prism/serialize.c
+compiling prism/token_type.c
+compiling ../prism/util/pm_memchr.c
+compiling ../prism/util/pm_strpbrk.c
+compiling ../prism/prism.c
+compiling ../prism_init.c
+assembling ../coroutine/arm32/Context.S
+compiling ../enc/ascii.c
+compiling ../enc/us_ascii.c
+compiling ../enc/utf_8.c
+compiling ../enc/unicode.c
+compiling enc/trans/newline.c
+generating armv8l-linux-eabihf-fake.rb
+compiling ../ruby.c
+compiling ../array.c
+compiling prism/api_node.c
+armv8l-linux-eabihf-fake.rb updated
+compiling ../compile.c
+compiling ../iseq.c
+compiling ../rjit.c
+compiling ../rjit_c.c
+compiling ../vm.c
+miniprelude.c updated
+compiling ../miniinit.c
+rbconfig.rb updated
+generating encdb.h
+generating enc.mk
+creating verconf.h
+verconf.h updated
+compiling ../loadpath.c
+encdb.h updated
+making srcs under enc
+generating table from enc/trans/big5.c
+generating table from enc/trans/cesu_8.c
+generating table from enc/trans/chinese.c
+generating table from enc/trans/ebcdic.c
+generating table from enc/trans/emoji.c
+generating table from enc/trans/emoji_sjis_docomo.c
+generating table from enc/trans/emoji_iso2022_kddi.c
+generating table from enc/trans/emoji_sjis_kddi.c
+generating table from enc/trans/emoji_sjis_softbank.c
+generating table from enc/trans/escape.c
+generating table from enc/trans/gb18030.c
+generating table from enc/trans/gbk.c
+generating table from enc/trans/japanese.c
+generating table from enc/trans/iso2022.c
+generating table from enc/trans/japanese_euc.c
+generating table from enc/trans/japanese_sjis.c
+generating table from enc/trans/korean.c
+generating table from enc/trans/single_byte.c
+generating table from enc/trans/utf8_mac.c
+generating table from enc/trans/utf_16_32.c
+generating enc/trans/escape.c ...
+generating enc/trans/cesu_8.c ...
+generating enc/trans/japanese.c ...
+generating enc/trans/ebcdic.c ...
+generating enc/trans/iso2022.c ...
+generating enc/trans/utf_16_32.c ...
+generating enc/trans/emoji.c ...
+generating enc/trans/single_byte.c ...
+generating enc/trans/emoji_iso2022_kddi.c ...
+generating enc/trans/emoji_sjis_softbank.c ...
+generating enc/trans/emoji_sjis_docomo.c ...
+generating enc/trans/emoji_sjis_kddi.c ...
+generating enc/trans/chinese.c ...
+generating enc/trans/japanese_sjis.c ...
+generating enc/trans/gbk.c ...
+generating enc/trans/utf8_mac.c ...
+generating enc/trans/korean.c ...
+generating enc/trans/japanese_euc.c ...
+generating enc/trans/gb18030.c ...
+generating enc/trans/big5.c ...
+generating transdb.h
+transdb.h updated
+compiling parse.c
+linking miniruby
+builtin_binary.inc updated
+compiling ../builtin.c
+linking static-library libruby-static.a
+generating makefiles ext/configure-ext.mk
+making enc
+making trans
+ext/configure-ext.mk updated
+compiling ../enc/trans/transdb.c
+generating table from ../enc/trans/big5.c
+compiling ../enc/encdb.c
+compiling ../enc/big5.c
+compiling ../enc/cesu_8.c
+generating table from ../enc/trans/cesu_8.c
+compiling ../enc/cp949.c
+generating table from ../enc/trans/chinese.c
+generating table from ../enc/trans/ebcdic.c
+generating table from ../enc/trans/emoji.c
+compiling ../enc/emacs_mule.c
+compiling ../enc/euc_jp.c
+generating table from ../enc/trans/emoji_iso2022_kddi.c
+compiling ../enc/euc_kr.c
+generating table from ../enc/trans/emoji_sjis_docomo.c
+compiling ../enc/euc_tw.c
+generating table from ../enc/trans/emoji_sjis_kddi.c
+generating table from ../enc/trans/emoji_sjis_softbank.c
+compiling ../enc/gb2312.c
+generating table from ../enc/trans/escape.c
+compiling ../enc/gb18030.c
+generating table from ../enc/trans/gb18030.c
+compiling ../enc/gbk.c
+generating table from ../enc/trans/gbk.c
+compiling ../enc/iso_8859_1.c
+compiling ../enc/iso_8859_2.c
+compiling ../enc/iso_8859_3.c
+generating table from ../enc/trans/iso2022.c
+generating table from ../enc/trans/japanese.c
+generating table from ../enc/trans/japanese_euc.c
+generating table from ../enc/trans/japanese_sjis.c
+compiling ../enc/iso_8859_4.c
+generating table from ../enc/trans/korean.c
+compiling ../enc/iso_8859_5.c
+compiling ../enc/iso_8859_6.c
+compiling ../enc/iso_8859_7.c
+generating table from ../enc/trans/single_byte.c
+compiling ../enc/iso_8859_8.c
+compiling ../enc/iso_8859_9.c
+compiling ../enc/iso_8859_10.c
+compiling ../enc/iso_8859_11.c
+compiling ../enc/iso_8859_13.c
+compiling ../enc/iso_8859_14.c
+compiling ../enc/iso_8859_15.c
+compiling ../enc/iso_8859_16.c
+compiling ../enc/koi8_r.c
+compiling ../enc/koi8_u.c
+compiling ../enc/shift_jis.c
+compiling ../enc/utf_16be.c
+compiling ../enc/utf_16le.c
+compiling ../enc/utf_32be.c
+configuring bigdecimal
+configuring digest
+configuring coverage
+configuring json
+configuring cgi/escape
+configuring stringio
+configuring continuation
+configuring date
+configuring psych
+configuring fcntl
+configuring objspace
+configuring rbconfig/sizeof
+configuring nkf
+configuring etc
+configuring io/console
+configuring fiddle
+configuring digest/bubblebabble
+configuring erb/escape
+configuring syslog
+configuring monitor
+configuring -test-/RUBY_ALIGNOF
+compiling ../enc/utf_32le.c
+configuring openssl
+configuring socket
+configuring strscan
+configuring rubyvm
+configuring pathname
+configuring json/generator
+configuring digest/md5
+configuring ripper
+configuring pty
+generating table from ../enc/trans/utf8_mac.c
+compiling ../enc/windows_31j.c
+compiling ../enc/windows_1250.c
+generating table from ../enc/trans/utf_16_32.c
+compiling ../enc/windows_1251.c
+compiling ../enc/windows_1252.c
+configuring json/parser
+compiling ../enc/windows_1253.c
+compiling ../enc/windows_1254.c
+compiling ../enc/windows_1257.c
+configuring zlib
+linking encoding gb2312.so
+linking encoding iso_8859_8.so
+linking encoding iso_8859_6.so
+generating ../enc/trans/japanese.c ...
+generating ../enc/trans/escape.c ...
+compiling ../enc/trans/escape.c
+generating ../enc/trans/cesu_8.c ...
+compiling ../enc/trans/japanese.c
+compiling ../enc/trans/cesu_8.c
+linking encoding iso_8859_11.so
+linking encoding gbk.so
+linking encoding cp949.so
+linking encoding euc_kr.so
+linking encoding euc_tw.so
+linking encoding koi8_u.so
+linking encoding iso_8859_2.so
+linking encoding iso_8859_5.so
+linking encoding iso_8859_3.so
+linking encoding iso_8859_4.so
+linking encoding iso_8859_7.so
+linking encoding big5.so
+generating ../enc/trans/ebcdic.c ...
+linking encoding iso_8859_10.so
+linking encoding iso_8859_14.so
+compiling ../enc/trans/ebcdic.c
+linking encoding iso_8859_15.so
+generating ../enc/trans/iso2022.c ...
+linking encoding utf_16be.so
+compiling ../enc/trans/iso2022.c
+linking encoding iso_8859_13.so
+linking encoding koi8_r.so
+linking encoding utf_16le.so
+linking encoding encdb.so
+linking encoding iso_8859_1.so
+linking encoding iso_8859_9.so
+linking encoding emacs_mule.so
+linking encoding iso_8859_16.so
+linking transcoder transdb.so
+linking encoding cesu_8.so
+linking encoding utf_32le.so
+linking encoding windows_1251.so
+linking encoding windows_1253.so
+linking encoding windows_1250.so
+linking encoding windows_1252.so
+linking encoding windows_1257.so
+linking encoding gb18030.so
+linking encoding utf_32be.so
+linking encoding windows_1254.so
+linking encoding shift_jis.so
+generating ../enc/trans/utf_16_32.c ...
+compiling ../enc/trans/utf_16_32.c
+linking transcoder japanese.so
+linking encoding windows_31j.so
+linking transcoder escape.so
+linking encoding euc_jp.so
+linking transcoder cesu_8.so
+linking transcoder ebcdic.so
+configuring -test-/abi
+configuring -test-/arith_seq/beg_len_step
+configuring -test-/arith_seq/extract
+configuring -test-/array/concat
+configuring -test-/array/resize
+configuring -test-/bignum
+configuring -test-/bug-14834
+configuring -test-/bug-3571
+configuring -test-/bug-5832
+configuring -test-/bug_reporter
+configuring -test-/class
+configuring -test-/cxxanyargs
+linking transcoder iso2022.so
+configuring -test-/debug
+configuring -test-/dln/empty
+configuring -test-/econv
+configuring digest/rmd160
+configuring -test-/enumerator_kw
+configuring -test-/eval
+configuring -test-/exception
+configuring -test-/fatal
+configuring -test-/file
+linking transcoder utf_16_32.so
+configuring digest/sha1
+configuring digest/sha2
+generating ../enc/trans/emoji.c ...
+compiling ../enc/trans/emoji.c
+linking transcoder emoji.so
+generating ../enc/trans/single_byte.c ...
+compiling ../enc/trans/single_byte.c
+configuring -test-/float
+configuring -test-/funcall
+configuring -test-/gvl/call_without_gvl
+configuring -test-/hash
+configuring -test-/integer
+configuring -test-/iseq_load
+configuring -test-/iter
+configuring -test-/load/dot.dot
+configuring -test-/load/protect
+configuring -test-/marshal/compat
+configuring -test-/marshal/internal_ivar
+configuring -test-/marshal/usr
+configuring -test-/memory_status
+configuring -test-/memory_view
+configuring -test-/method
+configuring -test-/notimplement
+configuring -test-/num2int
+configuring -test-/path_to_class
+configuring -test-/popen_deadlock
+configuring -test-/postponed_job
+configuring -test-/printf
+configuring -test-/proc
+configuring -test-/random
+configuring -test-/rational
+configuring -test-/rb_call_super_kw
+configuring -test-/recursion
+configuring -test-/regexp
+configuring -test-/scan_args
+configuring -test-/st/foreach
+configuring -test-/st/numhash
+configuring -test-/st/update
+configuring -test-/string
+configuring -test-/struct
+configuring -test-/symbol
+linking transcoder single_byte.so
+generating ../enc/trans/emoji_iso2022_kddi.c ...
+compiling ../enc/trans/emoji_iso2022_kddi.c
+generating ../enc/trans/emoji_sjis_softbank.c ...
+compiling ../enc/trans/emoji_sjis_softbank.c
+generating ../enc/trans/emoji_sjis_docomo.c ...
+compiling ../enc/trans/emoji_sjis_docomo.c
+configuring -test-/thread/instrumentation
+configuring -test-/thread_fd
+configuring -test-/time
+configuring -test-/tracepoint
+configuring -test-/typeddata
+configuring -test-/vm
+configuring -test-/wait
+generating ../enc/trans/emoji_sjis_kddi.c ...
+compiling ../enc/trans/emoji_sjis_kddi.c
+linking transcoder emoji_iso2022_kddi.so
+linking transcoder emoji_sjis_softbank.so
+linking transcoder emoji_sjis_docomo.so
+linking transcoder emoji_sjis_kddi.so
+generating ../enc/trans/chinese.c ...
+compiling ../enc/trans/chinese.c
+generating ../enc/trans/japanese_sjis.c ...
+compiling ../enc/trans/japanese_sjis.c
+generating ../enc/trans/gbk.c ...
+compiling ../enc/trans/gbk.c
+linking transcoder chinese.so
+linking transcoder japanese_sjis.so
+linking transcoder gbk.so
+generating ../enc/trans/utf8_mac.c ...
+compiling ../enc/trans/utf8_mac.c
+generating ../enc/trans/korean.c ...
+compiling ../enc/trans/korean.c
+linking transcoder utf8_mac.so
+linking transcoder korean.so
+configuring io/nonblock
+configuring io/wait
+generating ../enc/trans/japanese_euc.c ...
+compiling ../enc/trans/japanese_euc.c
+generating ../enc/trans/gb18030.c ...
+compiling ../enc/trans/gb18030.c
+linking transcoder japanese_euc.so
+linking transcoder gb18030.so
+generating ../enc/trans/big5.c ...
+compiling ../enc/trans/big5.c
+linking transcoder big5.so
+making encs
+generating makefile exts.mk
+exts.mk updated
+compiling ../../../../ext/-test-/abi/abi.c
+compiling ../../../../ext/-test-/cxxanyargs/cxxanyargs.cpp
+compiling ../../../../ext/-test-/econv/append.c
+compiling ../../../../ext/-test-/econv/init.c
+compiling ../../../../ext/-test-/eval/eval.c
+compiling ../../../../../ext/-test-/arith_seq/extract/extract.c
+compiling ../../../../ext/-test-/RUBY_ALIGNOF/c.c
+compiling ../../../../../ext/-test-/gvl/call_without_gvl/call_without_gvl.c
+compiling ../../../../ext/-test-/exception/dataerror.c
+compiling ../../../../ext/-test-/RUBY_ALIGNOF/cpp.cpp
+compiling ../../../../../ext/-test-/arith_seq/beg_len_step/beg_len_step.c
+compiling ../../../../ext/-test-/exception/enc_raise.c
+compiling ../../../../../ext/-test-/array/concat/to_ary_concat.c
+compiling ../../../../ext/-test-/iseq_load/iseq_load.c
+compiling ../../../../ext/-test-/exception/ensured.c
+compiling ../../../../../ext/-test-/array/resize/resize.c
+compiling ../../../../ext/-test-/exception/init.c
+compiling ../../../../ext/-test-/bug_reporter/bug_reporter.c
+compiling ../../../../ext/-test-/bug-3571/bug.c
+compiling ../../../../../ext/-test-/load/protect/protect.c
+compiling ../../../../ext/-test-/bug-5832/bug.c
+compiling ../../../../ext/-test-/bug-14834/bug-14384.c
+compiling ../../../../ext/-test-/class/class2name.c
+compiling ../../../../ext/-test-/integer/core_ext.c
+compiling ../../../../../ext/-test-/dln/empty/empty.c
+compiling ../../../../ext/-test-/enumerator_kw/enumerator_kw.c
+compiling ../../../../ext/-test-/integer/init.c
+compiling ../../../../ext/-test-/fatal/rb_fatal.c
+compiling ../../../../ext/-test-/debug/init.c
+compiling ../../../../ext/-test-/funcall/funcall.c
+compiling ../../../../ext/-test-/integer/my_integer.c
+compiling ../../../../ext/-test-/debug/inspector.c
+compiling ../../../../ext/-test-/float/init.c
+compiling ../../../../ext/-test-/hash/delete.c
+compiling ../../../../ext/-test-/debug/profile_frames.c
+compiling ../../../../../ext/-test-/st/numhash/numhash.c
+compiling ../../../../ext/-test-/postponed_job/postponed_job.c
+compiling ../../../../ext/-test-/class/init.c
+compiling ../../../../ext/-test-/bignum/big2str.c
+compiling ../../../../ext/-test-/float/nextafter.c
+compiling ../../../../ext/-test-/file/fs.c
+compiling ../../../../../ext/-test-/marshal/compat/usrcompat.c
+compiling ../../../../ext/-test-/hash/init.c
+compiling ../../../../../ext/-test-/load/dot.dot/dot.dot.c
+compiling ../../../../ext/-test-/iter/break.c
+compiling ../../../../../ext/-test-/marshal/usr/usrmarshal.c
+compiling ../../../../ext/-test-/memory_view/memory_view.c
+compiling ../../../../ext/-test-/struct/data.c
+compiling ../../../../ext/-test-/notimplement/bug.c
+compiling ../../../../ext/-test-/num2int/num2int.c
+compiling ../../../../ext/-test-/iter/init.c
+compiling ../../../../ext/-test-/path_to_class/path_to_class.c
+compiling ../../../../ext/-test-/method/arity.c
+compiling ../../../../ext/-test-/popen_deadlock/infinite_loop_dlsym.c
+compiling ../../../../ext/-test-/time/init.c
+compiling ../../../../ext/-test-/random/bad_version.c
+compiling ../../../../ext/-test-/printf/printf.c
+compiling ../../../../../ext/-test-/st/update/update.c
+compiling ../../../../ext/-test-/recursion/recursion.c
+compiling ../../../../ext/-test-/rational/rat.c
+compiling ../../../../ext/-test-/scan_args/scan_args.c
+compiling ../../../../../ext/-test-/st/foreach/foreach.c
+compiling ../../../ext/bigdecimal/bigdecimal.c
+compiling ../../../../ext/-test-/vm/at_exit.c
+compiling ../../../../ext/-test-/random/init.c
+compiling ../../../../ext/-test-/regexp/init.c
+compiling ../../../../ext/-test-/typeddata/typeddata.c
+compiling ../../../../ext/-test-/rb_call_super_kw/rb_call_super_kw.c
+compiling ../../../../ext/cgi/escape/escape.c
+compiling ../../../../ext/-test-/thread_fd/thread_fd.c
+compiling ../../../ext/continuation/continuation.c
+compiling ../../../../ext/-test-/symbol/init.c
+compiling ../../../../ext/-test-/wait/wait.c
+compiling ../../../../ext/-test-/proc/init.c
+compiling ../../../../../ext/-test-/thread/instrumentation/instrumentation.c
+compiling ../../../../ext/-test-/tracepoint/gc_hook.c
+compiling ../../../ext/coverage/coverage.c
+compiling ../../../../ext/-test-/string/capacity.c
+compiling ../../../../../ext/-test-/marshal/internal_ivar/internal_ivar.c
+linking shared-object -test-/abi.so
+compiling ../../../../ext/-test-/string/coderange.c
+compiling ../../../../ext/-test-/iter/yield.c
+compiling ../../../../ext/-test-/proc/receiver.c
+linking shared-object -test-/eval.so
+linking shared-object -test-/dln/empty.so
+compiling ../../../../ext/-test-/string/cstr.c
+linking shared-object -test-/arith_seq/extract.so
+linking shared-object -test-/load/dot.dot.so
+installing default coverage libraries
+compiling ../../../../ext/-test-/tracepoint/tracepoint.c
+compiling ../../../../ext/-test-/string/ellipsize.c
+linking shared-object -test-/econv.so
+compiling ../../../../ext/-test-/random/loop.c
+linking shared-object -test-/bug_reporter.so
+compiling ../../../ext/date/date_core.c
+linking shared-object -test-/array/resize.so
+compiling ../../../ext/date/date_parse.c
+linking shared-object continuation.so
+linking shared-object -test-/hash.so
+compiling ../../../ext/digest/digest.c
+compiling ../../../../ext/-test-/proc/super.c
+compiling ../../../../ext/-test-/struct/duplicate.c
+linking shared-object -test-/path_to_class.so
+compiling ../../../../ext/-test-/struct/init.c
+linking shared-object -test-/fatal/rb_fatal.so
+compiling ../../../../ext/-test-/regexp/parse_depth_limit.c
+linking shared-object -test-/bug_5832.so
+compiling ../../../../ext/-test-/time/leap_second.c
+linking shared-object -test-/bug_3571.so
+linking shared-object -test-/popen_deadlock/infinite_loop_dlsym.so
+linking shared-object -test-/rb_call_super_kw.so
+compiling ../../../../ext/-test-/method/init.c
+compiling ../../../../ext/-test-/file/init.c
+compiling ../../../../ext/-test-/struct/len.c
+linking shared-object -test-/notimplement.so
+linking shared-object -test-/class.so
+compiling ../../../ext/date/date_strftime.c
+linking shared-object -test-/vm/at_exit.so
+linking shared-object -test-/array/to_ary_concat.so
+linking shared-object -test-/st/update.so
+linking shared-object -test-/recursion.so
+compiling ../../../../ext/-test-/symbol/type.c
+linking shared-object -test-/bug_14834.so
+linking shared-object -test-/marshal/usr.so
+linking shared-object -test-/arith_seq/beg_len_step.so
+linking shared-object -test-/debug.so
+linking shared-object -test-/float.so
+compiling ../../../../ext/-test-/struct/member.c
+linking shared-object -test-/rational.so
+linking shared-object -test-/gvl/call_without_gvl.so
+linking shared-object -test-/typeddata.so
+linking shared-object -test-/thread_fd.so
+compiling ../../../../ext/erb/escape/escape.c
+linking shared-object -test-/funcall.so
+installing digest libraries
+generating constant definitions
+linking shared-object -test-/marshal/compat.so
+linking shared-object -test-/integer.so
+linking shared-object -test-/load/protect.so
+compiling ../../../ext/date/date_strptime.c
+compiling ../../../ext/bigdecimal/missing.c
+linking shared-object -test-/exception.so
+linking shared-object -test-/iseq_load.so
+linking shared-object -test-/marshal/internal_ivar.so
+compiling ../../../ext/fcntl/fcntl.c
+linking shared-object -test-/wait.so
+installing default date_core libraries
+linking shared-object -test-/postponed_job.so
+compiling ../../../../ext/-test-/bignum/bigzero.c
+linking shared-object -test-/enumerator_kw.so
+installing default digest libraries
+compiling ../../../../ext/-test-/bignum/div.c
+compiling ../../../../ext/-test-/time/new.c
+linking shared-object -test-/st/numhash.so
+compiling ../../../../ext/-test-/string/enc_associate.c
+compiling ../../../../ext/-test-/string/enc_dummy.c
+compiling ../../../../ext/-test-/file/stat.c
+compiling ../../../ext/etc/etc.c
+linking shared-object -test-/st/foreach.so
+linking shared-object -test-/thread/instrumentation.so
+compiling ../../../../ext/-test-/string/enc_str_buf_cat.c
+compiling ../../../../ext/-test-/bignum/init.c
+compiling ../../../../ext/-test-/string/fstring.c
+compiling ../../../../ext/io/console/console.c
+compiling ../../../ext/fiddle/closure.c
+compiling ../../../ext/fiddle/conversions.c
+installing default bigdecimal libraries
+compiling ../../../../ext/io/wait/wait.c
+compiling ../../../../ext/-test-/bignum/intpack.c
+compiling ../../../../ext/io/nonblock/nonblock.c
+compiling ../../../ext/fiddle/fiddle.c
+linking shared-object -test-/num2int.so
+compiling ../../../../ext/-test-/bignum/mul.c
+compiling ../../../ext/fiddle/function.c
+compiling ../../../ext/fiddle/handle.c
+compiling ../../../ext/fiddle/memory_view.c
+compiling ../../../ext/fiddle/pinned.c
+installing default console libraries
+compiling ../../../ext/nkf/nkf.c
+compiling ../../../ext/monitor/monitor.c
+installing default nkf libraries
+compiling ../../../ext/fiddle/pointer.c
+compiling ../../../ext/objspace/object_tracing.c
+compiling ../../../../ext/-test-/bignum/str2big.c
+compiling ../../../../ext/-test-/string/init.c
+compiling ../../../../ext/-test-/string/modify.c
+compiling ../../../ext/pathname/pathname.c
+compiling ../../../../ext/-test-/string/new.c
+compiling ../../../ext/psych/psych.c
+compiling ../../../ext/psych/psych_emitter.c
+compiling ../../../ext/pty/pty.c
+compiling ../../../ext/psych/psych_parser.c
+installing default fiddle libraries
+compiling ../../../ext/openssl/openssl_missing.c
+compiling ../../../ext/objspace/objspace.c
+compiling ../../../ext/openssl/ossl.c
+linking shared-object -test-/RUBY_ALIGNOF.so
+compiling ../../../ext/psych/psych_to_ruby.c
+compiling ../../../ext/openssl/ossl_asn1.c
+compiling ../../../../ext/-test-/string/nofree.c
+compiling ../../../ext/openssl/ossl_bio.c
+compiling ../../../ext/psych/psych_yaml_tree.c
+compiling ../../../ext/objspace/objspace_dump.c
+limits.c updated
+compiling limits.c
+compiling ../../../ext/openssl/ossl_bn.c
+compiling ../../../ext/openssl/ossl_cipher.c
+sizes.c updated
+generating eventids1.c from ../../../parse.y
+compiling sizes.c
+compiling ../../../../ext/-test-/string/normalize.c
+installing default objspace libraries
+generating eventids1.h from ../../../parse.y
+generating eventids2table.c from ../../../ext/ripper/eventids2.c
+extracting ripper.y from ../../../parse.y
+linking shared-object -test-/proc.so
+linking shared-object -test-/method.so
+compiling ../../../ext/openssl/ossl_config.c
+installing default libraries
+linking shared-object -test-/tracepoint.so
+linking shared-object -test-/regexp.so
+linking shared-object -test-/iter.so
+checking ../../../parse.y and ../../../ext/ripper/eventids2.c
+linking shared-object -test-/struct.so
+generating constant definitions
+linking shared-object -test-/printf.so
+linking shared-object -test-/random.so
+compiling ../../../ext/openssl/ossl_digest.c
+linking shared-object fcntl.so
+linking shared-object -test-/symbol.so
+compiling ../../../ext/ripper/eventids2.c
+linking shared-object cgi/escape.so
+compiling ../../../ext/openssl/ossl_engine.c
+compiling ../../../../ext/-test-/string/qsort.c
+compiling ../../../../ext/-test-/string/rb_interned_str.c
+compiling ../../../ext/stringio/stringio.c
+compiling ../../../../ext/-test-/string/set_len.c
+installing default ripper libraries
+compiling ../../../ext/openssl/ossl_hmac.c
+compiling eventids1.c
+compiling ../../../ext/openssl/ossl_kdf.c
+compiling ../../../../ext/-test-/string/rb_str_dup.c
+linking shared-object erb/escape.so
+compiling ../../../ext/strscan/strscan.c
+compiling ../../../ext/syslog/syslog.c
+compiling ../../../ext/openssl/ossl_ns_spki.c
+compiling ../../../ext/socket/init.c
+compiling ../../../ext/socket/constants.c
+compiling ../../../ext/socket/basicsocket.c
+compiling ../../../ext/socket/socket.c
+compiling ../../../ext/openssl/ossl_ocsp.c
+linking shared-object -test-/file.so
+linking shared-object io/wait.so
+compiling ../../../ext/zlib/zlib.c
+compiling ../../../../ext/json/generator/generator.c
+compiling ../../../ext/socket/ipsocket.c
+linking shared-object -test-/time.so
+compiling ../../../../ext/json/parser/parser.c
+compiling ../../../ext/socket/tcpsocket.c
+compiling ../../../ext/openssl/ossl_pkcs12.c
+compiling ../../../ext/openssl/ossl_pkcs7.c
+linking shared-object -test-/cxxanyargs.so
+compiling ../../../ext/openssl/ossl_pkey.c
+compiling ../../../ext/openssl/ossl_pkey_dh.c
+compiling ../../../ext/socket/tcpserver.c
+compiling ../../../ext/socket/sockssocket.c
+linking shared-object -test-/memory_view.so
+compiling ../../../ext/socket/udpsocket.c
+compiling ../../../ext/socket/unixsocket.c
+compiling ../../../ext/socket/unixserver.c
+compiling ../../../ext/openssl/ossl_pkey_dsa.c
+compiling ../../../ext/openssl/ossl_pkey_ec.c
+compiling ../../../ext/openssl/ossl_pkey_rsa.c
+compiling ../../../ext/socket/option.c
+compiling ../../../ext/socket/ancdata.c
+linking shared-object -test-/bignum.so
+linking shared-object io/nonblock.so
+compiling ../../../ext/socket/raddrinfo.c
+compiling ../../../ext/openssl/ossl_provider.c
+compiling ../../../ext/openssl/ossl_rand.c
+compiling ../../../ext/socket/ifaddr.c
+linking shared-object coverage.so
+compiling ../../../ext/openssl/ossl_ssl.c
+linking shared-object monitor.so
+compiling ../../../ext/openssl/ossl_ts.c
+compiling ../../../ext/openssl/ossl_x509.c
+compiling ../../../ext/openssl/ossl_ssl_session.c
+compiling ../../../ext/openssl/ossl_x509attr.c
+compiling compiler ripper.y
+generating ripper_init.c from ../../../ext/ripper/ripper_init.c.tmpl
+compiling ../../../ext/openssl/ossl_x509cert.c
+compiling ../../../ext/openssl/ossl_x509crl.c
+linking shared-object rbconfig/sizeof.so
+compiling ../../../ext/openssl/ossl_x509ext.c
+compiling ../../../ext/openssl/ossl_x509name.c
+compiling ../../../ext/openssl/ossl_x509req.c
+compiling ../../../ext/openssl/ossl_x509revoked.c
+compiling ../../../ext/openssl/ossl_x509store.c
+linking shared-object pty.so
+linking shared-object digest.so
+compiling ripper_init.c
+linking shared-object -test-/string.so
+compiling ../../../../ext/digest/bubblebabble/bubblebabble.c
+compiling ../../../../ext/digest/md5/md5init.c
+compiling ../../../../ext/digest/sha2/sha2init.c
+compiling ../../../../ext/digest/md5/md5.c
+compiling ../../../../ext/digest/sha2/sha2.c
+compiling ../../../../ext/digest/sha1/sha1init.c
+compiling ../../../../ext/digest/rmd160/rmd160init.c
+compiling ../../../../ext/digest/rmd160/rmd160.c
+compiling ../../../../ext/digest/sha1/sha1.c
+installing default sha2 libraries
+linking shared-object psych.so
+linking shared-object etc.so
+linking shared-object syslog.so
+linking shared-object digest/bubblebabble.so
+linking shared-object fiddle.so
+linking shared-object digest/md5.so
+linking shared-object digest/sha1.so
+linking shared-object digest/sha2.so
+linking shared-object -test-/scan_args.so
+linking shared-object digest/rmd160.so
+linking shared-object objspace.so
+linking shared-object io/console.so
+linking shared-object json/ext/parser.so
+linking shared-object strscan.so
+linking shared-object stringio.so
+linking shared-object pathname.so
+linking shared-object json/ext/generator.so
+linking shared-object openssl.so
+linking shared-object zlib.so
+linking shared-object socket.so
+linking shared-object nkf.so
+linking shared-object bigdecimal.so
+linking shared-object date_core.so
+compiling ripper.c
+linking shared-object ripper.so
+linking ruby
++ make -s -j81 install
+Downloading bundled gem minitest-5.20.0...
+Downloading bundled gem power_assert-2.0.3...
+Downloading bundled gem rake-13.1.0...
+Downloading bundled gem test-unit-3.6.1...
+Downloading bundled gem rexml-3.2.6...
+Downloading bundled gem rss-0.3.0...
+Downloading bundled gem net-ftp-0.2.0...
+Downloading bundled gem net-imap-0.4.2...
+Downloading bundled gem net-pop-0.1.2...
+Downloading bundled gem net-smtp-0.4.0...
+Downloading bundled gem matrix-0.4.2...
+Downloading bundled gem prime-0.1.2...
+Downloading bundled gem typeprof-0.21.8...
+Downloading bundled gem racc-1.7.1...
+generating enc.mk
+Update rbs to 33813a60752624d58dfe5ae770b39bfaf29fbaf1
+Update debug to 927587afb6aac69b358b86a01f602d207053e8d2
+../.bundle/.timestamp/rbs.revision updated
+../.bundle/.timestamp/debug.revision updated
+Building rbs@33813a60752624d58dfe5ae770b39bfaf29fbaf1 to ../gems/rbs-3.2.2.gem
+Building debug@927587afb6aac69b358b86a01f602d207053e8d2 to ../gems/debug-1.8.0.gem
+Extracting bundle gem prime-0.1.2...
+Extracting bundle gem net-pop-0.1.2...
+Extracting bundle gem test-unit-3.6.1...
+Extracting bundle gem rake-13.1.0...
+Extracting bundle gem rexml-3.2.6...
+Extracting bundle gem net-ftp-0.2.0...
+Extracting bundle gem power_assert-2.0.3...
+Extracting bundle gem rss-0.3.0...
+Extracting bundle gem net-imap-0.4.2...
+Extracting bundle gem net-smtp-0.4.0...
+Extracting bundle gem matrix-0.4.2...
+Extracting bundle gem racc-1.7.1...
+Extracting bundle gem typeprof-0.21.8...
+Extracting bundle gem minitest-5.20.0...
+  Successfully built RubyGem
+  Name: debug
+  Version: 1.8.0
+  File: debug-1.8.0.gem
+Extracting bundle gem debug-1.8.0...
+Unpacked gems/net-pop-0.1.2.gem
+Unpacked gems/matrix-0.4.2.gem
+Unpacked gems/prime-0.1.2.gem
+Unpacked gems/net-smtp-0.4.0.gem
+Unpacked gems/net-ftp-0.2.0.gem
+Unpacked gems/power_assert-2.0.3.gem
+Unpacked gems/typeprof-0.21.8.gem
+Unpacked gems/racc-1.7.1.gem
+Unpacked gems/rss-0.3.0.gem
+Unpacked gems/minitest-5.20.0.gem
+Unpacked gems/test-unit-3.6.1.gem
+Unpacked gems/net-imap-0.4.2.gem
+Unpacked gems/rexml-3.2.6.gem
+making srcs under enc
+making enc
+Unpacked gems/rake-13.1.0.gem
+generating transdb.h
+Unpacked gems/debug-1.8.0.gem
+  Successfully built RubyGem
+  Name: rbs
+  Version: 3.2.2
+  File: rbs-3.2.2.gem
+Extracting bundle gem rbs-3.2.2...
+transdb.h updated
+generating makefiles ext/configure-ext.mk
+making trans
+ext/configure-ext.mk updated
+compiling ../enc/trans/transdb.c
+configuring racc-1.7.1/ext/racc/cparse
+configuring rbs-3.2.2/ext/rbs_extension
+configuring debug-1.8.0/ext/debug
+Unpacked gems/rbs-3.2.2.gem
+linking transcoder transdb.so
+making encs
+generating makefile exts.mk
+exts.mk updated
+compiling ../../../../../../.bundle/gems/rbs-3.2.2/ext/rbs_extension/constants.c
+compiling ../../../../../../.bundle/gems/rbs-3.2.2/ext/rbs_extension/lexer.c
+compiling ../../../../../../.bundle/gems/rbs-3.2.2/ext/rbs_extension/lexstate.c
+compiling ../../../../../../.bundle/gems/rbs-3.2.2/ext/rbs_extension/location.c
+compiling ../../../../../../.bundle/gems/debug-1.8.0/ext/debug/debug.c
+compiling ../../../../../../.bundle/gems/debug-1.8.0/ext/debug/iseq_collector.c
+compiling ../../../../../../.bundle/gems/rbs-3.2.2/ext/rbs_extension/main.c
+compiling ../../../../../../.bundle/gems/rbs-3.2.2/ext/rbs_extension/parser.c
+compiling ../../../../../../.bundle/gems/rbs-3.2.2/ext/rbs_extension/parserstate.c
+compiling ../../../../../../.bundle/gems/rbs-3.2.2/ext/rbs_extension/ruby_objs.c
+compiling ../../../../../../../.bundle/gems/racc-1.7.1/ext/racc/cparse/cparse.c
+compiling ../../../../../../.bundle/gems/rbs-3.2.2/ext/rbs_extension/unescape.c
+ln -sfT ../../../../.bundle/gems/rbs-3.2.2/lib ../../../../../.bundle/gems/rbs-3.2.2/lib
+ln -sfT ../../../../.bundle/gems/racc-1.7.1/lib ../../../../../../.bundle/gems/racc-1.7.1/lib
+ln -sfT ../../../../.bundle/gems/debug-1.8.0/lib ../../../../../.bundle/gems/debug-1.8.0/lib
+linking shared-object debug/debug.so
+linking shared-object racc/cparse.so
+linking shared-object rbs_extension.so
+Installing to 
+installing binary commands:         /home/jaruga/git/ruby/ruby/build/install/bin
+installing base libraries:          /home/jaruga/git/ruby/ruby/build/install/lib
+installing arch files:              /home/jaruga/git/ruby/ruby/build/install/lib/ruby/3.3.0+0/armv8l-linux-eabihf
+installing pkgconfig data:          /home/jaruga/git/ruby/ruby/build/install/lib/pkgconfig
+installing extension objects:       /home/jaruga/git/ruby/ruby/build/install/lib/ruby/3.3.0+0/armv8l-linux-eabihf
+installing extension objects:       /home/jaruga/git/ruby/ruby/build/install/lib/ruby/site_ruby/3.3.0+0/armv8l-linux-eabihf
+installing extension objects:       /home/jaruga/git/ruby/ruby/build/install/lib/ruby/vendor_ruby/3.3.0+0/armv8l-linux-eabihf
+installing extension headers:       /home/jaruga/git/ruby/ruby/build/install/include/ruby-3.3.0+0/armv8l-linux-eabihf
+installing extension scripts:       /home/jaruga/git/ruby/ruby/build/install/lib/ruby/3.3.0+0
+installing extension scripts:       /home/jaruga/git/ruby/ruby/build/install/lib/ruby/site_ruby/3.3.0+0
+installing extension scripts:       /home/jaruga/git/ruby/ruby/build/install/lib/ruby/vendor_ruby/3.3.0+0
+installing extension headers:       /home/jaruga/git/ruby/ruby/build/install/include/ruby-3.3.0+0/ruby
+installing command scripts:         /home/jaruga/git/ruby/ruby/build/install/bin
+installing library scripts:         /home/jaruga/git/ruby/ruby/build/install/lib/ruby/3.3.0+0
+installing common headers:          /home/jaruga/git/ruby/ruby/build/install/include/ruby-3.3.0+0
+installing manpages:                /home/jaruga/git/ruby/ruby/build/install/share/man/man1
+installing default gems from lib:   /home/jaruga/git/ruby/ruby/build/install/lib/ruby/gems/3.3.0+0
+                                    abbrev 0.1.1
+                                    base64 0.1.1
+                                    benchmark 0.2.1
+                                    bundler 2.5.0.dev
+                                    cgi 0.3.6
+                                    csv 3.2.8
+                                    delegate 0.3.0
+                                    did_you_mean 1.6.3
+                                    drb 2.1.1
+                                    english 0.7.2
+                                    erb 4.0.3
+                                    error_highlight 0.5.1
+                                    fileutils 1.7.1
+                                    find 0.1.1
+                                    forwardable 1.3.3
+                                    getoptlong 0.2.0
+                                    ipaddr 1.2.5
+                                    irb 1.8.3
+                                    logger 1.5.3
+                                    mutex_m 0.1.2
+                                    net-http 0.3.2
+                                    net-protocol 0.2.1
+                                    observer 0.1.1
+                                    open-uri 0.3.0
+                                    open3 0.1.2
+                                    optparse 0.4.0.pre.1
+                                    ostruct 0.5.5
+                                    pp 0.4.0
+                                    prettyprint 0.1.1
+                                    prism 0.15.1
+                                    pstore 0.1.2
+                                    rdoc 6.5.0
+                                    readline 0.0.3
+                                    reline 0.3.9
+                                    resolv 0.2.2
+                                    resolv-replace 0.1.1
+                                    rinda 0.1.1
+                                    ruby2_keywords 0.0.5
+                                    securerandom 0.2.2
+                                    set 1.0.3
+                                    shellwords 0.1.0
+                                    singleton 0.1.1
+                                    syntax_suggest 1.1.0
+                                    tempfile 0.1.3
+                                    time 0.2.2
+                                    timeout 0.4.0
+                                    tmpdir 0.1.3
+                                    tsort 0.1.1
+                                    un 0.2.1
+                                    uri 0.12.2
+                                    weakref 0.1.2
+                                    yaml 0.2.1
+installing default gems from ext:   /home/jaruga/git/ruby/ruby/build/install/lib/ruby/gems/3.3.0+0
+                                    bigdecimal 3.1.5
+                                    date 3.3.3
+                                    digest 3.1.1
+                                    etc 1.4.3.dev.1
+                                    fcntl 1.0.2
+                                    fiddle 1.1.2
+                                    io-console 0.6.1.dev
+                                    io-nonblock 0.2.0
+                                    io-wait 0.3.0
+                                    json 2.6.3
+                                    nkf 0.1.3
+                                    openssl 3.2.0
+                                    pathname 0.2.1
+                                    psych 5.1.1.1
+                                    stringio 3.0.9
+                                    strscan 3.0.7
+                                    syslog 0.1.1
+                                    zlib 3.0.0
+installing bundled gems:            /home/jaruga/git/ruby/ruby/build/install/lib/ruby/gems/3.3.0+0
+                                    minitest 5.20.0
+                                    power_assert 2.0.3
+                                    rake 13.1.0
+                                    test-unit 3.6.1
+                                    rexml 3.2.6
+                                    rss 0.3.0
+                                    net-ftp 0.2.0
+                                    net-imap 0.4.2
+                                    net-pop 0.1.2
+                                    net-smtp 0.4.0
+                                    matrix 0.4.2
+                                    prime 0.1.2
+                                    rbs 3.2.2
+                                    typeprof 0.21.8
+                                    debug 1.8.0
+                                    racc 1.7.1
+installing bundled gem cache:       /home/jaruga/git/ruby/ruby/build/install/lib/ruby/gems/3.3.0+0/cache
++ setarch linux32 --verbose --32bit make -s test
+Switching on ADDR_LIMIT_32BIT.
+Execute command `make'.
+ Fstderr output is not empty
+   <internal:ractor>:760: [BUG] Segmentation fault at 0x0000000c
+   ruby 3.3.0dev (2023-10-30T09:27:06Z master 14fa5e39d7) [armv8l-linux-eabihf]
+   
+   -- Control frame information -----------------------------------------------
+   c:0005 p:0003 s:0021 e:000020 METHOD <internal:ractor>:760
+   c:0004 p:0008 s:0014 e:000013 BLOCK  bootstraptest.test_ractor.rb_541_1260.rb:4
+   c:0003 p:0018 s:0011 e:000010 METHOD <internal:kernel>:187
+   c:0002 p:0004 s:0006 e:000005 BLOCK  bootstraptest.test_ractor.rb_541_1260.rb:3 [FINISH]
+   c:0001 p:---- s:0003 e:000002 DUMMY  [FINISH]
+   
+   -- Ruby level backtrace information ----------------------------------------
+   bootstraptest.test_ractor.rb_541_1260.rb:3:in `block in <main>'
+   <internal:kernel>:187:in `loop'
+   bootstraptest.test_ractor.rb_541_1260.rb:4:in `block (2 levels) in <main>'
+   <internal:ractor>:760:in `yield'
+   
+   -- Threading information ---------------------------------------------------
+   Total ractor count: 2
+   Ruby thread count for this ractor: 1
+   
+   -- Machine register context ------------------------------------------------
+     r0: 0x00000000  r1: 0x00000001  r2: 0x00000007  r3: 0x00000000  r4: 0x00c935c8
+     r5: 0x00000002  r6: 0x00000002  r7: 0x00000000  r8: 0x00000004  r9: 0x00c646b0
+    r10: 0x00000002  sp: 0xd5d91c90 fau: 0x0000000c
+   
+   -- Other runtime information -----------------------------------------------
+   
+   * Loaded script: bootstraptest.test_ractor.rb_541_1260.rb
+   
+   * Loaded features:
+   
+       0 enumerator.so
+       1 thread.rb
+       2 fiber.so
+       3 rational.so
+       4 complex.so
+       5 ruby2_keywords.rb
+       6 /home/jaruga/git/ruby/ruby/build/.ext/armv8l-linux-eabihf/enc/encdb.so
+       7 /home/jaruga/git/ruby/ruby/build/.ext/armv8l-linux-eabihf/enc/trans/transdb.so
+   
+   * Process memory map:
+   
+   00640000-0093a000 r-xp 00000000 103:03 29263803                          /home/jaruga/git/ruby/ruby/build/ruby
+   0094a000-0094e000 r--p 002fa000 103:03 29263803                          /home/jaruga/git/ruby/ruby/build/ruby
+   0094e000-0094f000 rw-p 002fe000 103:03 29263803                          /home/jaruga/git/ruby/ruby/build/ruby
+   0094f000-00956000 rw-p 00000000 00:00 0 
+   00bf3000-00cba000 rw-p 00000000 00:00 0                                  [heap]
+   d5700000-d5721000 rw-p 00000000 00:00 0 
+   d5721000-d5800000 ---p 00000000 00:00 0 
+   d5900000-d5921000 rw-p 00000000 00:00 0 
+   d5921000-d5a00000 ---p 00000000 00:00 0 
+   d5a00000-d5a21000 rw-p 00000000 00:00 0 
+   d5a21000-d5b00000 ---p 00000000 00:00 0 
+   d5b00000-d5b21000 rw-p 00000000 00:00 0 
+   d5b21000-d5c00000 ---p 00000000 00:00 0 
+   d5c5f000-d5c60000 ---p 00000000 00:00 0 
+   d5c60000-d5c90000 rw-p 00000000 00:00 0 
+   d5c9f000-d5ca0000 ---p 00000000 00:00 0 
+   d5ca0000-d5cd0000 rw-p 00000000 00:00 0 
+   d5cde000-d5cdf000 ---p 00000000 00:00 0 
+   d5cdf000-d5cef000 rw-p 00000000 00:00 0 
+   d5cef000-d5cf0000 ---p 00000000 00:00 0 
+   d5cf0000-d5d81000 rw-p 00000000 00:00 0 
+   d5d81000-d5d82000 ---p 00000000 00:00 0 
+   d5d82000-d5e12000 rw-p 00000000 00:00 0 
+   d5e12000-d5e13000 ---p 00000000 00:00 0 
+   d5e13000-d5ea3000 rw-p 00000000 00:00 0 
+   d5ea3000-d5ea4000 ---p 00000000 00:00 0 
+   d5ea4000-d5f34000 rw-p 00000000 00:00 0 
+   d5f34000-d5f35000 ---p 00000000 00:00 0 
+   d5f35000-d5fc5000 rw-p 00000000 00:00 0 
+   d5fc5000-d5fc6000 ---p 00000000 00:00 0 
+   d5fc6000-d6056000 rw-p 00000000 00:00 0 
+   d6056000-d6057000 ---p 00000000 00:00 0 
+   d6057000-d60e7000 rw-p 00000000 00:00 0 
+   d60e7000-d60e8000 ---p 00000000 00:00 0 
+   d60e8000-d6178000 rw-p 00000000 00:00 0 
+   d6178000-d6179000 ---p 00000000 00:00 0 
+   d6179000-d6209000 rw-p 00000000 00:00 0 
+   d6209000-d620a000 ---p 00000000 00:00 0 
+   d620a000-d629a000 rw-p 00000000 00:00 0 
+   d629a000-d629b000 ---p 00000000 00:00 0 
+   d629b000-d632b000 rw-p 00000000 00:00 0 
+   d632b000-d632c000 ---p 00000000 00:00 0 
+   d632c000-f5d10000 rw-p 00000000 00:00 0 
+   f5d10000-f5d12000 r-xp 00000000 103:03 29263555                          /home/jaruga/git/ruby/ruby/build/.ext/armv8l-linux-eabihf/enc/trans/transdb.so
+   f5d12000-f5d21000 ---p 00002000 103:03 29263555                          /home/jaruga/git/ruby/ruby/build/.ext/armv8l-linux-eabihf/enc/trans/transdb.so
+   f5d21000-f5d22000 r--p 00001000 103:03 29263555                          /home/jaruga/git/ruby/ruby/build/.ext/armv8l-linux-eabihf/enc/trans/transdb.so
+   f5d22000-f5d23000 rw-p 00002000 103:03 29263555                          /home/jaruga/git/ruby/ruby/build/.ext/armv8l-linux-eabihf/enc/trans/transdb.so
+   f5d30000-f5d32000 r-xp 00000000 103:03 29263548                          /home/jaruga/git/ruby/ruby/build/.ext/armv8l-linux-eabihf/enc/encdb.so
+   f5d32000-f5d41000 ---p 00002000 103:03 29263548                          /home/jaruga/git/ruby/ruby/build/.ext/armv8l-linux-eabihf/enc/encdb.so
+   f5d41000-f5d42000 r--p 00001000 103:03 29263548                          /home/jaruga/git/ruby/ruby/build/.ext/armv8l-linux-eabihf/enc/encdb.so
+   f5d42000-f5d43000 rw-p 00002000 103:03 29263548                          /home/jaruga/git/ruby/ruby/build/.ext/armv8l-linux-eabihf/enc/encdb.so
+   f5d4f000-f5d50000 ---p 00000000 00:00 0 
+   f5d50000-f5d71000 rw-p 00000000 00:00 0 
+   f5d71000-f5d72000 ---p 00000000 00:00 0 
+   f5d72000-f5d93000 rw-p 00000000 00:00 0 
+   f5d93000-f5d94000 ---p 00000000 00:00 0 
+   f5d94000-f5db5000 rw-p 00000000 00:00 0 
+   f5db5000-f5db6000 ---p 00000000 00:00 0 
+   f5db6000-f5dd7000 rw-p 00000000 00:00 0 
+   f5dd7000-f5dd8000 ---p 00000000 00:00 0 
+   f5dd8000-f5df9000 rw-p 00000000 00:00 0 
+   f5df9000-f5dfa000 ---p 00000000 00:00 0 
+   f5dfa000-f5e1b000 rw-p 00000000 00:00 0 
+   f5e1b000-f5e1c000 ---p 00000000 00:00 0 
+   f5e1c000-f5e3d000 rw-p 00000000 00:00 0 
+   f5e3d000-f5e3e000 ---p 00000000 00:00 0 
+   f5e3e000-f5e5f000 rw-p 00000000 00:00 0 
+   f5e5f000-f5e60000 ---p 00000000 00:00 0 
+   f5e60000-f66a0000 rw-p 00000000 00:00 0 
+   f66af000-f73b0000 rw-p 00000000 00:00 0 
+   f73b5000-f7436000 rw-p 00000000 00:00 0 
+   f7436000-f76b0000 r--p 0006f000 103:03 11802136                          /usr/lib/locale/locale-archive
+   f76b0000-f78b0000 r--p 00000000 103:03 11802136                          /usr/lib/locale/locale-archive
+   f78b0000-f79bc000 r-xp 00000000 103:03 11670018                          /usr/lib/arm-linux-gnueabihf/libc.so.6
+   f79bc000-f79cc000 ---p 0010c000 103:03 11670018                          /usr/lib/arm-linux-gnueabihf/libc.so.6
+   f79cc000-f79ce000 r--p 0010c000 103:03 11670018                          /usr/lib/arm-linux-gnueabihf/libc.so.6
+   f79ce000-f79cf000 rw-p 0010e000 103:03 11670018                          /usr/lib/arm-linux-gnueabihf/libc.so.6
+   f79cf000-f79d9000 rw-p 00000000 00:00 0 
+   f79e0000-f7a21000 r-xp 00000000 103:03 11670021                          /usr/lib/arm-linux-gnueabihf/libm.so.6
+   f7a21000-f7a30000 ---p 00041000 103:03 11670021                          /usr/lib/arm-linux-gnueabihf/libm.so.6
+   f7a30000-f7a31000 r--p 00040000 103:03 11670021                          /usr/lib/arm-linux-gnueabihf/libm.so.6
+   f7a31000-f7a32000 rw-p 00041000 103:03 11670021                          /usr/lib/arm-linux-gnueabihf/libm.so.6
+   f7a40000-f7a6b000 r-xp 00000000 103:03 11670013                          /usr/lib/arm-linux-gnueabihf/libcrypt.so.1.1.0
+   f7a6b000-f7a7b000 ---p 0002b000 103:03 11670013                          /usr/lib/arm-linux-gnueabihf/libcrypt.so.1.1.0
+   f7a7b000-f7a7c000 r--p 0002b000 103:03 11670013                          /usr/lib/arm-linux-gnueabihf/libcrypt.so.1.1.0
+   f7a7c000-f7a7d000 rw-p 0002c000 103:03 11670013                          /usr/lib/arm-linux-gnueabihf/libcrypt.so.1.1.0
+   f7a7d000-f7a85000 rw-p 00000000 00:00 0 
+   f7a88000-f7aa7000 r-xp 00000000 103:03 11670015                          /usr/lib/arm-linux-gnueabihf/ld-linux-armhf.so.3
+   f7aac000-f7ab3000 r--s 00000000 103:03 11670285                          /usr/lib/arm-linux-gnueabihf/gconv/gconv-modules.cache
+   f7ab3000-f7ab5000 rw-p 00000000 00:00 0 
+   f7ab5000-f7ab6000 r-xp 00000000 00:00 0                                  [sigpage]
+   f7ab6000-f7ab8000 r--p 0001e000 103:03 11670015                          /usr/lib/arm-linux-gnueabihf/ld-linux-armhf.so.3
+   f7ab8000-f7ab9000 rw-p 00020000 103:03 11670015                          /usr/lib/arm-linux-gnueabihf/ld-linux-armhf.so.3
+   ff7dd000-fffdc000 rw-p 00000000 00:00 0                                  [stack]
+   ffff0000-ffff1000 r-xp 00000000 00:00 0                                  [vectors]
